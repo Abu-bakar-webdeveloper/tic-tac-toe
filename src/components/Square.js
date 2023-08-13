@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const Square = () => {
+const Square = ({value}) => {
+  const [boxvalue , setboxvalue] = useState(null);
+
+  function clickHandler(){
+    setboxvalue('x');
+  }
   return (
-    <button className='square'>x</button>
+      <button className='square' onClick={clickHandler}></button>
   )
 }
 
